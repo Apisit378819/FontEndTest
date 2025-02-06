@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useEffect, useState , useCallback } from "react";
-import CloseIcon from "../public/close.svg";
 import axios from "axios";
 type Pet = {
   pet_id: number;
@@ -236,7 +235,7 @@ const Table: React.FC<DataTableProps> = ({ data }) => {
             <div className="flex justify-between items-center py-6 mx-4 md:mx-10">
               <h2 className="text-2xl font-bold ">Pet Detail</h2>
               <Image
-                src={CloseIcon}
+                src={""}
                 alt="close button"
                 className="cursor-pointer"
                 onClick={() => setPopUpEdit(!popUpEdit)}
@@ -408,7 +407,7 @@ const Table: React.FC<DataTableProps> = ({ data }) => {
             <div className="flex justify-between items-center py-6 mx-4 md:mx-10">
               <h2 className="text-2xl font-bold">Pet Delete</h2>
               <Image
-                src={CloseIcon}
+                src={""}
                 alt="close button"
                 className="cursor-pointer"
                 onClick={() => setPopUpDelete(!popUpDelete)}

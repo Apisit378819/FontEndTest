@@ -1,6 +1,5 @@
 import type React from "react";
 import { useEffect, useState } from "react";
-import CloseIcon from "@/public/assets/close.svg";
 import Image from "next/image";
 import ImagePetDefauit from "@/public/assets/petimage.svg";
 import axios from "axios";
@@ -161,7 +160,7 @@ export default function Step3({
               <h2 className="text-2xl font-bold ">Pet Detail</h2>
 
               <Image
-                src={CloseIcon}
+                src={""}
                 alt="close button"
                 className="cursor-pointer"
                 onClick={() => setPopUp(!popUp)}
