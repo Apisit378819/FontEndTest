@@ -33,8 +33,6 @@ export default function Step1({
     setIsClient(true);
   }, [formData.pet_name]);
 
-
-
   const handleChangePageCheck = () => {
     if (formData.pet_name === "") {
       setErrorName("Please enter your pet name");
@@ -83,7 +81,9 @@ export default function Step1({
                 <div className="avatar">
                   <div className="w-32 h-32 rounded-full bg-base-200 ring ring-[#FF5C00] ring-offset-base-100 ring-offset-2 ">
                     {formData.image_pet ? (
-                      <img
+                      <Image
+                        width={100} // กำหนดขนาดให้เหมาะสม
+                        height={100} // กำหนดขนาดให้เหมาะสม
                         src={formData.image_pet || ImagePetDefauit} // ใช้ path ที่สัมพันธ์กับ public
                         alt="Avatar"
                         className="w-full h-full object-cover"

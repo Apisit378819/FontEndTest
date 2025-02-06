@@ -59,7 +59,7 @@ export default function Step3({
 
       // Pass an empty event to resetFormData
       resetFormData({} as React.ChangeEvent<HTMLInputElement>);
-      router.push("/")
+      router.push("/");
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -175,7 +175,9 @@ export default function Step3({
                 <div className="avatar">
                   <div className="w-32 h-32 rounded-full bg-base-200 ring ring-[#FF5C00] ring-offset-base-100 ring-offset-2 ">
                     {formData.image_pet ? (
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src={formData.image_pet || ImagePetDefauit}
                         alt="Avatar"
                         className="w-full h-full object-cover"
